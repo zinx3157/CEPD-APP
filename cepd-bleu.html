@@ -39,6 +39,37 @@ html{-webkit-text-size-adjust:100%}body{padding-left:env(safe-area-inset-left);p
 
 /* Light CEPD identity */
 :root{--green:#102754;--cream:#f7f9fc;--ink:#102754;--gold:#c9a24b}body{background:#f7f9fc}.hero{background:radial-gradient(700px 380px at 82% -8%,rgba(201,162,75,.18),transparent 62%),linear-gradient(135deg,#102754,#345ca6)}.sidebar{background:#fff}.btn-red,.btn-green{background:#b3202a}.home-welcome,.card,.quick-links a,.quick-links button{box-shadow:0 5px 24px rgba(20,42,75,.035)}
+
+/* Mobile-first refinement: readable controls, touch targets and safe areas. */
+@media(max-width:750px){
+ html{scroll-padding-top:76px} .shell,.main,.content{min-width:0;max-width:100%}
+ .topbar{min-height:64px;height:auto;padding-top:7px;padding-bottom:7px;padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right));gap:8px}
+ .top-left,.top-actions{min-width:0;flex-shrink:1} .top-actions{gap:8px} .mobile-menu{min-width:44px;min-height:44px;display:grid;place-items:center;font-size:24px}
+ .mobile-brand{white-space:nowrap;font-size:18px;margin-left:2px} #language{max-width:120px;min-height:44px;font-size:13px;padding:8px 10px}
+ .topbar .pill{min-height:44px;line-height:1.2;max-width:150px;padding:8px 10px;font-size:11px}
+ .sidebar{width:min(300px,88vw);max-width:88vw;max-height:100dvh;padding-top:max(24px,env(safe-area-inset-top));padding-bottom:max(20px,env(safe-area-inset-bottom))}
+ .nav{gap:3px}.nav button{font-size:14px;min-height:48px}.nav button svg{width:20px;height:20px;flex:none}
+ .content{padding:16px max(15px,env(safe-area-inset-right)) calc(110px + env(safe-area-inset-bottom)) max(15px,env(safe-area-inset-left))}
+ .hero{min-height:350px;height:auto;border-radius:14px}.hero-content{width:100%;padding:42px 18px}.hero h1{font-size:clamp(30px,8.5vw,42px);line-height:1.12;overflow-wrap:anywhere}.hero p{font-size:14px;line-height:1.65}.hero-actions .btn{min-height:46px;font-size:12px}
+ .home-welcome p,.page-intro p,.news-banner p,.media-info p,.media-community p,.big-card p,.contact-address p{font-size:14px;line-height:1.65}
+ .welcome h2,.section-head h2{font-size:25px}.page-intro h1{font-size:clamp(30px,8vw,39px);overflow-wrap:anywhere}.welcome p{font-size:13px}
+ .quick-links{gap:10px}.quick-links a,.quick-links button{min-height:152px;padding:14px}.quick-links b{font-size:14px}.quick-links small,.quick-links span{font-size:12px;line-height:1.45}
+ .service h3,.event h3{font-size:18px}.service p,.event p{font-size:13px}.service .date-box{width:62px;min-width:62px}.quote p{font-size:16px}.prayer-card p{font-size:13px}.text-link,.event .more,.section-head .all,.side-card button{min-height:44px;display:inline-flex;align-items:center;font-size:12px}
+ .event .more{margin-top:2px}.events,.listing,.assembly-grid,.contact-grid,.media-links,.prayer-options,.community-paths{gap:12px}.listing .event{min-height:0}
+ .card-label,.eyebrow,.city-tag{font-size:10px;letter-spacing:1.1px}.sample,.media-info .media-note,.contact-address .contact-note{font-size:12px;line-height:1.55}
+ .assembly p,.contact-card small,.media-links small,.community-paths small,.faith-links small{font-size:13px;line-height:1.55}.assembly a,.contact-card b,.media-links b,.community-paths b,.faith-links b{font-size:12px;min-height:44px;display:inline-flex;align-items:center}
+ .filter-bar{gap:8px;margin:18px 0}.filter{font-size:12px;min-height:44px;padding:10px 14px}.directory-actions .btn,.contact-actions .btn{min-height:46px}
+ .reader-controls{gap:14px}.reader-controls label,.song-search-label,.bible-version-label{font-size:13px}.reader-controls select,.reader-controls input,.song-search-label input,#bible-version,.modal input,.modal textarea,.modal select{font-size:16px;min-height:48px}
+ .bible-box{padding:18px}.bible-box p,.bible-hint{font-size:13px}.verses{font-size:17px;line-height:1.8}.reader-tools .btn{min-height:46px;font-size:12px}.song-item a,.song-item button{min-height:44px;display:inline-flex;align-items:center}
+ .bottom-nav{min-height:calc(68px + env(safe-area-inset-bottom));padding-top:5px;box-shadow:0 -5px 18px #0e1a4512}.bottom-nav button{font-size:clamp(10px,2.8vw,11px);min-height:58px;gap:3px;line-height:1.15;padding:5px 2px}.bottom-nav button span{text-align:center;overflow-wrap:anywhere}.bottom-nav svg{width:21px;height:21px;flex:none}
+ .modal-backdrop{align-items:center;overflow-y:auto;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom))}.modal{max-height:min(90vh,calc(100dvh - 32px));padding:22px}.modal h2{font-size:26px}.modal p{font-size:14px}.modal label{font-size:13px}.modal .close{min-width:44px;min-height:44px}
+ .toast{bottom:calc(82px + env(safe-area-inset-bottom));font-size:13px;line-height:1.4}
+}
+@media(max-width:390px){.topbar .pill{display:none}.top-actions{margin-left:auto}.hero-actions .btn{flex:1 1 auto}.quick-links a,.quick-links button{min-height:158px}.reader-tools .btn{flex:1 1 calc(50% - 8px)}}
+@media(max-width:320px){.content{padding-left:12px;padding-right:12px}.hero-content{padding-left:14px;padding-right:14px}.quick-links{grid-template-columns:1fr}.quick-links a,.quick-links button{min-height:120px}.faith-links{grid-template-columns:1fr}.bottom-nav button{font-size:10px}.mobile-brand{font-size:16px}}
+@media(max-width:750px) and (max-height:480px){.hero{min-height:280px}.hero-content{padding-top:25px;padding-bottom:25px}.bottom-nav button{min-height:46px}.bottom-nav{min-height:56px}.content{padding-bottom:calc(80px + env(safe-area-inset-bottom))}}
+@media(hover:hover){.quick-links a:hover,.quick-links button:hover,.contact-card:hover{transform:translateY(-2px)}}
+
 </style>
 </head>
 <body><div class="shell"><div class="menu-overlay" onclick="toggleMenu()"></div><aside class="sidebar" id="sidebar"><div class="brand"><img class="brand-icon" src="cepd-logo.webp" alt="Logo CEPD Madagascar"><div><div class="brand-title">CEPD</div><div class="brand-sub">Madagascar</div></div></div><div class="nav-label">Menu principal</div><nav class="nav">
@@ -126,4 +157,15 @@ function downloadCalendar(i){const e=events[i],now=new Date(),local=new Date(now
 <script>
 const previousViewSwitch=showView;showView=function(id){previousViewSwitch(id);document.querySelectorAll('[data-mobile-view]').forEach(button=>{let selected=button.dataset.mobileView===id;button.classList.toggle('selected',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')})};
 
-</script><script>if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) { window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {})); }</script></body></html>
+</script><script>if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) { window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {})); }</script>
+<script>
+/* Keep mobile menu state accessible and return focus when a dialog closes. */
+const mobileMenuButton=document.querySelector('.mobile-menu');
+if(mobileMenuButton){mobileMenuButton.setAttribute('aria-expanded','false');mobileMenuButton.setAttribute('aria-controls','sidebar')}
+const oldMobileMenu=toggleMenu;toggleMenu=function(){oldMobileMenu();if(mobileMenuButton)mobileMenuButton.setAttribute('aria-expanded',String(document.getElementById('sidebar').classList.contains('open')))};
+const oldMobileView=showView;showView=function(id){oldMobileView(id);if(mobileMenuButton)mobileMenuButton.setAttribute('aria-expanded','false')};
+let priorDialogFocus=null;const oldMobileModal=modal;modal=function(...args){priorDialogFocus=document.activeElement;oldMobileModal(...args)};
+const oldMobileClose=closeModal;closeModal=function(){const wasOpen=document.getElementById('backdrop').classList.contains('open');oldMobileClose();if(wasOpen&&priorDialogFocus&&typeof priorDialogFocus.focus==='function')priorDialogFocus.focus()};
+document.addEventListener('keydown',function(e){if(e.key!=='Tab'||!document.getElementById('backdrop').classList.contains('open'))return;const focusable=[...document.querySelectorAll('.modal button:not([disabled]),.modal a[href],.modal input:not([disabled]),.modal textarea:not([disabled]),.modal select:not([disabled])')].filter(el=>el.getClientRects().length);if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+</script>
+</body></html>
